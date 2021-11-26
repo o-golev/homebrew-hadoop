@@ -1,4 +1,4 @@
-# O-golev Hadoop
+# Hadoop 2.10.1 and Hive 2.3.8
 
 ## How do I install these formulae?
 
