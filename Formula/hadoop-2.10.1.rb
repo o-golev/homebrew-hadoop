@@ -1,7 +1,7 @@
 class Hadoop2101 < Formula
   desc "Framework for distributed processing of large data sets"
   homepage "https://hadoop.apache.org/"
-  url "https://archive.apache.org/dist/hadoop/common/hadoop-2.10.1/hadoop-2.10.1.tar.gz"
+  url "https://www.apache.org/dyn/closer.lua?path=hadoop/common/hadoop-2.10.1/hadoop-2.10.1.tar.gz"
   sha256 "273d5fa1d479d0bb96759b16cf4cbd6ba3e7f863a0778cbae55ab83417e961f0"
   license "Apache-2.0"
 

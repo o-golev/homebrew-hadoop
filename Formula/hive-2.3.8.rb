@@ -1,7 +1,7 @@
 class Hive238 < Formula
   desc "Hadoop-based data summarization, query, and analysis"
   homepage "https://hive.apache.org"
-  url "http://archive.apache.org/dist/hive/hive-2.3.8/apache-hive-2.3.8-bin.tar.gz"
+  url "https://www.apache.org/dyn/closer.lua?path=hive/hive-2.3.8/apache-hive-2.3.8-bin.tar.gz"
   sha256 "3746528298fb70938e30bfbb66f756d1810acafbe86ba84edef7bd3455589176"
   license "Apache-2.0"
 
@@ -15,12 +15,6 @@ class Hive238 < Formula
   def install
     rm_f Dir["bin/*.cmd", "bin/ext/*.cmd", "bin/ext/util/*.cmd"]
     libexec.install %w[bin conf examples hcatalog lib scripts]
-
-    # Hadoop currently supplies a newer version
-    # and two versions on the classpath causes problems
-    #rm libexec/"lib/guava-19.0.jar"
-    #guava = (Formula["hadoop"].opt_libexec/"share/hadoop/common/lib").glob("guava-*-jre.jar")
-    #ln_s guava.first, libexec/"lib"
 
     Pathname.glob("#{libexec}/bin/*") do |file|
       next if file.directory?
