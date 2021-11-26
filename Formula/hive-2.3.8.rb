@@ -1,7 +1,7 @@
 class Hive238 < Formula
   desc "Hadoop-based data summarization, query, and analysis"
   homepage "https://hive.apache.org"
-  url "https://www.apache.org/dyn/closer.lua?path=hive/hive-2.3.8/apache-hive-2.3.8-bin.tar.gz"
+  url "https://archive.apache.org/dist/hive/hive-2.3.8/apache-hive-2.3.8-bin.tar.gz"
   sha256 "3746528298fb70938e30bfbb66f756d1810acafbe86ba84edef7bd3455589176"
   license "Apache-2.0"
 
@@ -21,7 +21,7 @@ class Hive238 < Formula
 
       (bin/file.basename).write_env_script file,
         JAVA_HOME:   Formula["openjdk@8"].opt_prefix,
-        HADOOP_HOME: "${HADOOP_HOME:-#{Formula["hadoop"].opt_libexec}}",
+        HADOOP_HOME: "${HADOOP_HOME:-#{Formula["o-golev/hadoop/hadoop-2.10.1"].opt_libexec}}",
         HIVE_HOME:   libexec
     end
   end
